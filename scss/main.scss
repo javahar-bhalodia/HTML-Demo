@@ -1,0 +1,284 @@
+.header-section {
+    padding: 24px 0;
+    @include justify-content(center);
+    @include align-item(center);
+
+    .header-item1 {
+        @include display-flex(flex);
+        @include justify-content(flex-start);
+        @include align-item(center);
+
+        .item1-inner {
+            padding: 0 17px;
+
+            &:first-child {
+                padding-left: 0px;
+            }
+
+            &:last-child {
+                padding-right: 0px;
+            }
+
+            a {
+                &:hover {
+                    svg {
+                        stroke: $color--primary;
+                    }
+                }
+            }
+
+            .heart {
+                &:hover {
+                    svg {
+                        fill: $color--primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .logo-img {
+        @include display-flex(flex);
+        @include justify-content(center);
+        @include align-item(center);
+
+        img {
+            max-height: 40px;
+            width: auto;
+        }
+    }
+
+    .item2 {
+        @include justify-content(flex-end);
+    }
+}
+
+.banner {
+    position: relative;
+
+    .banner-content {
+        position: absolute;
+        bottom: 40%;
+        left: 0;
+        padding: 0 15px;
+        width: 100%;
+
+        .caption {
+            max-width: 800px;
+        }
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+
+    .grid-item {
+        .grid-img-lg {
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                img {
+                    transform: scale(1.04);
+                }
+            }
+
+            img {
+                height: 592px;
+                transition: transform .55s, -webkit-transform .55s;
+            }
+
+            .grid-content {
+                position: absolute;
+                bottom: 0;
+                display: block;
+                left: 0;
+                padding: 32px;
+                position: absolute;
+                width: 100%;
+
+                h4 {
+                    display: inline-block;
+                    border-bottom: 1px solid transparent;
+                }
+
+                &:hover {
+                    h4 {
+                        border-bottom: 1px solid currentColor;
+                    }
+                }
+            }
+        }
+
+        .grid-img-sm {
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                img {
+                    transform: scale(1.04);
+                }
+            }
+
+            img {
+                height: 286px;
+                transition: transform .55s, -webkit-transform .55s;
+            }
+
+            .grid-content {
+                position: absolute;
+                bottom: 0;
+                display: block;
+                left: 0;
+                padding: 32px;
+                position: absolute;
+                width: 100%;
+
+                h4 {
+                    display: inline-block;
+                    border-bottom: 1px solid transparent;
+                }
+
+                &:hover {
+                    h4 {
+                        border-bottom: 1px solid currentColor;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .item1,
+    .item2 {
+        grid-column: 1/span 1;
+    }
+
+    .item3 {
+        grid-column: 2/span 1;
+        grid-row: 1/span 2;
+    }
+
+    .item4 {
+        grid-column: 3/span 2;
+        grid-row: 1/span 1;
+    }
+
+    .item5 {
+        grid-column: 3/span 1;
+    }
+
+    .item6 {
+        grid-column: 4/span 1;
+    }
+}
+
+.usp-section {
+    .usp-heading {
+        text-align: center;
+    }
+
+    .usp-banner-items {
+        border: 1px solid #e2e2e4;
+        padding: 15px 0;
+
+        .col {
+            margin: 10px 0;
+            width: 20%;
+            border-right: 1px solid #e2e2e4;
+            @include display-flex(flex);
+            @include justify-content(center);
+            @include align-item(center);
+            @include flex-wrap(wrap);
+
+            &:last-child {
+                border: none;
+            }
+
+            .banner-item {
+                padding: 0 15px;
+                @include display-flex(flex);
+                @include justify-content(center);
+                @include align-item(center);
+
+                .usp-icon {
+                    min-width: 40px;
+                    // height: 40px;
+                    margin-right: 12px;
+                    flex-basis: 40px;
+                }
+
+                .usp-name {
+                    p {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.fine-jewelry-content {
+    text-align: center;
+}
+
+.lg-col-3 {
+    &:hover {
+        .fine-jewelry-content {
+            h4 {
+                color: $color--primary;
+            }
+        }
+    }
+}
+
+.fine-jewelry-img {
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    &:hover{
+        img{
+            transform: scale(1.04);
+        }
+    }
+    img {
+        object-fit: cover;
+        height: 100%;
+        transition: transform .55s, -webkit-transform .55s;
+    }
+}
+
+.diamonds-by-shape {
+    .diamonds-by-shape-heading {
+        text-align: center;
+    }
+
+    .diamonds-by-shape-items {
+        .row {
+            @include justify-content(space-between);
+
+            .col {
+                &:hover {
+                    .diamond-heading {
+                        p {
+                            color: $color--primary;
+                        }
+                    }
+                }
+
+                .diamond-img {
+                    max-width: 100px;
+                }
+
+                .diamond-heading {
+                    text-align: center;
+
+                    p {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
